@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<style>
+    * {
+
+margin: 0px;
+
+padding: 0px;
+
+box-sizing: border-box;
+
+}
+
+.body-text {
+
+display: flex;
+
+font-family: "Montserrat", sans-serif;
+
+align-items: center;
+
+justify-content: center;
+
+margin-top: 250px;
+
+}
+
+nav {
+
+display: flex;
+
+justify-content: space-around;
+
+align-items: center;
+
+min-height: 8vh;
+
+background-color: rgb(0, 0, 0);
+
+font-family: "Montserrat", sans-serif;
+
+}
+
+.heading {
+
+color: white;
+
+text-transform: uppercase;
+
+letter-spacing: 5px;
+
+font-size: 20px;
+
+}
+.heading a{
+text-decoration: none;
+color: white;
+}
+
+.nav-links {
+
+display: flex;
+
+justify-content: space-around;
+
+width: 30%;
+
+}
+
+.nav-links li {
+
+list-style: none;
+
+} 
+.nav-links a { 
+color: white;
+
+text-decoration: none;
+
+letter-spacing: 3px;
+
+font-weight: bold;
+
+font-size: 14px;
+
+padding: 14px 16px;
+}
+.nav-links a:hover:not(.active) {
+
+background-color: #f58336; 
+
+}
+.Join{
+justify-content: space-around;
+
+background-color:  #ff6600;
+
+height: 55px;
+
+width: 150px;
+
+border:none;
+
+border-radius: 10px;
+
+cursor: pointer;
+}
+.Join:hover{
+background-color: hsl(34, 92%, 61%);
+}
+.Join a{
+color: white;
+
+text-decoration: none;
+
+letter-spacing: 2px;
+
+font-weight: bold;
+
+font-size: 14px;
+
+}
+body{
+background-color: black;
+}
+h1{
+color: white;
+text-align: center;
+margin-top: 7vh;
+}
+span{
+font-family: "Montserrat", sans-serif;
+
+color:#f58336;
+
+text-transform: uppercase;
+
+letter-spacing: 5px;
+
+font-size: 50px;
+
+font-weight: 530;
+
+margin-left: 10px;
+margin-right: 10px;
+}
+form{
+color: white;
+}
+h4,p,h5{
+color: white;
+}
+.main{
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+margin-top: 80px;
+}
+.ideal{
+font-weight: bold;
+font-size: x-large;
+}
+.protein{
+font-size: x-large;
+}
+</style>
+<body>
+    <nav>
+        <div class="heading">
+            <h4><a href="/landing">FITMINDS</a></h4>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/plan">Plans</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/Contact">Contact</a></li>
+        </ul>
+        <button class="Join"><a href="/Login">Join Us</a></button>
+    </nav>
+    <div class="nutrition">
+        <h1>
+            We at <span>FITMINDS</span> thrive to provide you with the best facilities 
+            and <br> expertise in nutritional advice. 
+        </h1>
+        <div class="main" ng-app="app" ng-controller="controller">
+            <div class="protein">
+                <h4>Calculate your daily protein requirement</h4>
+                <br>
+                <br>
+                <form action="javascript:void(0)">
+                    <label for="weight">Weight (kg):</label>
+                    <input type="text" ng-model="user.weight" id="weight" name="weight" required>
+                    <br>
+                    <br>
+                    <label for="height">Height (cm):</label>
+                    <input type="text" ng-model="user.height" id="height" name="height" required>
+                    <br>
+                    <br>
+
+                    <button class="Join" style="color: white; font-weight: bolder; letter-spacing: 2.5px;" ng-click="calculateProtein()">Calculate</button>
+                    <br>
+                    <br>
+                </form>
+            </div>
+            <div class="ideal">
+                <h4>How many calories should your ideal diet contain ?</h4>
+                <br>
+                <p>Your current weight is = {{weight}} kg</p>
+                <br>
+                <p>Your current height is = {{height}} cm</p>
+                <br>
+                <h5>According to these statistics your IDEAL diet should contain: {{proteinRequirement}} grams of protein</h5>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        angular.module('app', [])
+        .controller('controller', ['$scope', function($scope) {
+            $scope.user = {
+                weight: '',
+                height: ''
+            };
+
+            $scope.calculateProtein = function() {
+                $scope.proteinRequirement = ($scope.user.weight * 2.2).toFixed(2);
+            };
+            document.getElementById('weight').addEventListener('keypress', function(event) {
+                if (!/[0-9]/.test(event.key)) {
+                    event.preventDefault();
+                }
+            });
+
+            document.getElementById('height').addEventListener('keypress', function(event) {
+                if (!/[0-9]/.test(event.key)) {
+                    event.preventDefault();
+                }
+            });
+        }]);
+        
+    </script>
+
+    
+</body>
+</html>

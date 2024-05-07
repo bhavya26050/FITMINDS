@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    
+</head>
+<style>
+    body, html {
+    margin: 0;
+    padding: 0;
+    
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #FFA500;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #000;
+}
+
+.section {
+    margin-bottom: 20px;
+    padding-right: 70px;
+}
+
+h2 {
+    color: #FFA500;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+p {
+    margin: 0;
+}
+.container{
+    border: solid orange 4px;
+    border-radius: 30px;
+    margin-top: 100px;
+    display: flex;
+    padding: 50px;
+    border-style: dotted;
+
+}
+h1{
+font-family: "Montserrat", sans-serif;
+
+color:#f58336;
+
+text-transform: uppercase;
+
+letter-spacing: 5px;
+
+font-size: 50px;
+
+font-weight: 530;
+
+}
+.welcome{
+    font-weight: bolder;
+    font-size: xx-large;
+    color: #f58336;
+}
+
+
+
+
+
+.user-details {
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+h2 {
+    margin-top: 0;
+}
+* {
+
+margin: 0px;
+
+padding: 0px;
+
+box-sizing: border-box;
+
+}
+
+.body-text {
+
+display: flex;
+
+font-family: "Montserrat", sans-serif;
+
+align-items: center;
+
+justify-content: center;
+
+margin-top: 250px;
+
+}
+
+nav {
+
+display: flex;
+
+justify-content: space-around;
+
+align-items: center;
+
+min-height: 8vh;
+
+background-color: rgb(0, 0, 0);
+
+font-family: "Montserrat", sans-serif;
+
+}
+
+.heading {
+
+color: white;
+
+text-transform: uppercase;
+
+letter-spacing: 5px;
+
+font-size: 20px;
+
+}
+.heading a{
+text-decoration: none;
+color: white;
+}
+
+.nav-links {
+
+display: flex;
+
+justify-content: space-around;
+
+width: 30%;
+
+}
+
+.nav-links li {
+
+list-style: none;
+
+} 
+.nav-links a { 
+color: white;
+
+text-decoration: none;
+
+letter-spacing: 3px;
+
+font-weight: bold;
+
+font-size: 14px;
+
+padding: 14px 16px;
+}
+.nav-links a:hover:not(.active) {
+
+background-color: #f58336; 
+
+}
+.Join{
+justify-content: space-around;
+
+background-color:  #ff6600;
+
+height: 55px;
+
+width: 150px;
+
+border:none;
+
+border-radius: 10px;
+
+cursor: pointer;
+}
+.Join:hover{
+background-color: hsl(34, 92%, 61%);
+}
+.Join a{
+color: white;
+
+text-decoration: none;
+
+letter-spacing: 2px;
+
+font-weight: bold;
+
+font-size: 14px;
+
+}
+span{
+    font-weight:bolder;
+}
+</style>
+<body>
+    <nav>
+
+        <div class="heading">
+  
+          <h4><a href="/landing">FITMINDS</a></h4>
+  
+        </div>
+  
+        <ul class="nav-links">
+          <li><a href="/plan">Plans</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/Contact">Contact</a></li>
+  
+        </ul>
+        <button class="Join"><a href="/Login">Join Us</a></button>
+  
+      </nav>
+      <h1 style="margin-left:750px ; margin-top: 30px;">Dashboard</h1>
+      <br>
+      <h1 style="color: white;">
+        {{user}}
+      </h1>
+    <div class="container">
+        <div class="horizontal-box">
+            
+            <div class="user-details" style="background-color: #000;">
+                <H1>Welcome back to your own fitness centre</H1>
+            </div>
+        </div>
+        <div class="container">
+            <div class="section">
+                <h2>Previous Attendance Records</h2>
+                <br>
+                <ul id="attendanceList">
+                </ul>
+            </div>
+            <div class="section">
+                <h2>Current Fitness Plan</h2>
+                <br>
+                <p id="fitnessPlan">  4-Day split body workout plan : <br>
+                    <br>
+                    <span>Day 1</span>  Chest and Shoulders<br>
+                    <br>
+                    <span>Day 2</span><br> Back and rear delts<br>
+                    <br>
+                    <span>Day 3</span> <br>  Arms<br>
+                    <br>
+                    <span>Day 4</span> <br>  Legs</p>
+            
+            </div>
+            <div class="section">
+                <h2>Maintenance Calories Required</h2>
+                <br>
+                <p id="maintenanceCalories">2500 kcal/day</p>
+            </div>
+            
+        </div>
+        
+        </div>
+    </div>
+</body>
+</html>

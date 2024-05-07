@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+
+      rel="stylesheet"
+
+    />
+
+    <style>
+        * {
+
+    margin: 0px;
+  
+    padding: 0px;
+  
+    box-sizing: border-box;
+  
+  }
+  
+  .body-text {
+  
+    display: flex;
+  
+    font-family: "Montserrat", sans-serif;
+  
+    align-items: center;
+  
+    justify-content: center;
+  
+    margin-top: 250px;
+  
+  }
+  
+  nav {
+  
+    display: flex;
+  
+    justify-content: space-around;
+  
+    align-items: center;
+  
+    min-height: 8vh;
+  
+    background-color: rgb(0, 0, 0);
+  
+    font-family: "Montserrat", sans-serif;
+  
+  }
+  
+  .heading {
+  
+    color: white;
+  
+    text-transform: uppercase;
+  
+    letter-spacing: 5px;
+  
+    font-size: 20px;
+  
+  }
+  .heading a{
+    text-decoration: none;
+    color: white;
+  }
+  
+  .nav-links {
+  
+    display: flex;
+  
+    justify-content: space-around;
+  
+    width: 30%;
+  
+  }
+  
+  .nav-links li {
+  
+    list-style: none;
+  
+  } 
+  .nav-links a { 
+    color: white;
+  
+    text-decoration: none;
+  
+    letter-spacing: 3px;
+  
+    font-weight: bold;
+  
+    font-size: 14px;
+  
+    padding: 14px 16px;
+  }
+  .nav-links a:hover:not(.active) {
+
+    background-color: #f58336; 
+
+  }
+  .Join{
+    justify-content: space-around;
+
+    background-color:  #ff6600;
+
+    height: 55px;
+
+    width: 150px;
+
+    border:none;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+  }
+  .Join:hover{
+    background-color: hsl(34, 92%, 61%);
+  }
+  .Join a{
+    color: white;
+
+    text-decoration: none;
+
+    letter-spacing: 2px;
+
+    font-weight: bold;
+
+    font-size: 14px;
+
+  }
+  body{
+    background-color: black;
+
+    background-image: url("/images/low-angle-view-unrecognizable-muscular-build-man-preparing-lifting-barbell-health-club.jpg");
+
+    background-repeat: no-repeat; 
+
+    background-attachment: fixed; 
+
+    background-size: cover;
+
+    background-size: cover;
+}
+    
+  
+  .headline {
+            
+    font-size: 100px;
+    
+    font-weight: bold;
+    
+    margin-bottom: 1rem;
+
+    color:white;
+
+    text-align: left;
+    
+  } 
+
+.main-content {
+ 
+  text-align: center;
+ 
+  padding: 4rem;
+}
+.cta-button {
+  
+  background-color: #ff6600;
+  
+  color: #fff;
+  
+  padding: 1rem 2rem;
+  
+  border: none;
+  
+  border-radius: 5px;
+  
+  font-weight: bold;
+  
+  cursor: pointer;
+
+  font-size: 16px;
+
+  letter-spacing: 2px;
+
+  text-decoration: none;
+
+}
+.cta-button a{
+  text-decoration: none;
+  color: white;
+}
+.cta-button:hover{
+    background-color: #f59250;
+}
+form{
+  
+
+  height: 500px;
+
+  width: 850px;
+
+  padding-left: 50px;
+}
+p{
+
+  text-align: left;
+
+  font-size: 20px;
+
+  color: white;
+
+}
+h3{
+
+  text-align: left;
+
+  font-size: 30px;
+
+  color: hsl(0, 0%, 100%);
+
+}
+.nut{
+  
+  margin-top: 9vh;
+  margin-left: 4vh;
+  margin-right: 4vh;
+  border: solid white 2px;
+  height: 50vh;
+  gap: 5%;
+  padding:20px;
+  background-color: black;
+  backdrop-filter: blur(20px);
+}
+.m1{
+  color: #f58336;
+  font-weight: bolder;
+}
+.more{
+  display: flex;
+  gap: 5%;
+  align-items: center;
+}
+
+    </style>
+    <title>FitMinds</title>
+
+  </head>
+
+  <body>
+    <div class="first">
+
+    <nav>
+
+      <div class="heading">
+
+        <h4><a href="/landing">FITMINDS</a></h4>
+
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="/plan">Plans</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/Contact">Contact</a></li>
+
+      </ul>
+      <button class="Join"><a href="/Login">Join Us</a></button>
+
+    </nav>
+
+    <form>
+
+    <div class="body-text"><h1></h1></div>
+
+    <div class="main-content">
+
+      <h3>BEST FITNESS PLANNER</h3><br>
+      
+      <h1 class="headline">MAKE YOUR BODY SHAPE</h1><br><br>
+      
+      <p>Unleash your potential and embark on a journey towards a stronger, fitter, and more confident you. Sign up for 'Make Your Body Shape' now and witness the incredible transformation your body is capable of!</p><br><br>
+      
+      <button class="cta-button"><a href="/plan2">Get Started</a></button>
+      
+  </div>
+
+  </form>
+    </div>
+    <br><br>
+
+    <div class="more">
+      <div class="nut">
+      <h3>Nutrition</h3>
+      <br><br>
+      <p class="m1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam voluptatibus dolor vero mollitia 
+        corporis provident, accusamus et similique tempore rerum,
+         assumenda molestias quam quisquam atque cupiditate autem quo ipsum. Dolorum.</p>
+      </div>
+      <div class="nut">
+        
+        <h3>
+          Workout
+        </h3>
+        <br><br>  
+        <p class="m1">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, nam. Aliquam assumenda iste 
+          quia dolorum odit ab aspernatur, pariatur maxime sequi vel magni atque qui ipsum molestias adipisci
+          sunt id.
+        </p>
+      </div>
+      <div class="nut">
+        <h3>Track your Goals</h3>
+        <br><br>
+        <p class="m1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, temporibus vitae ex nulla hic ipsum commodi 
+          perferendis ipsam ipsa. Fugit, provident. Tempora iste nesciunt cupiditate fugiat, ipsum quibusdam 
+          aliquid maiores!
+        </p>
+      </div>
+    </div>
+
+  </body>
+
+</html>

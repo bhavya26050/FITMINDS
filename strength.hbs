@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Strength Training Routine</title>
+	<style>
+		* {
+
+margin: 0px;
+
+padding: 0px;
+
+box-sizing: border-box;
+
+}
+
+.body-text {
+
+display: flex;
+
+font-family: "Montserrat", sans-serif;
+
+align-items: center;
+
+justify-content: center;
+
+margin-top: 250px;
+
+}
+
+nav {
+
+display: flex;
+
+justify-content: space-around;
+
+align-items: center;
+
+min-height: 8vh;
+
+background-color: rgb(0, 0, 0);
+
+font-family: "Montserrat", sans-serif;
+
+}
+
+.heading {
+
+color: white;
+
+text-transform: uppercase;
+
+letter-spacing: 5px;
+
+font-size: 20px;
+
+}
+.heading a{
+text-decoration: none;
+color: white;
+}
+
+.nav-links {
+
+display: flex;
+
+justify-content: space-around;
+
+width: 30%;
+
+}
+
+.nav-links li {
+
+list-style: none;
+
+} 
+.nav-links a { 
+color: white;
+
+text-decoration: none;
+
+letter-spacing: 3px;
+
+font-weight: bold;
+
+font-size: 14px;
+
+padding: 14px 16px;
+}
+.nav-links a:hover:not(.active) {
+
+background-color: #f58336; 
+
+}
+.Join{
+justify-content: space-around;
+
+background-color:  #ff6600;
+
+height: 55px;
+
+width: 150px;
+
+border:none;
+
+border-radius: 10px;
+
+cursor: pointer;
+}
+.Join:hover{
+background-color: hsl(34, 92%, 61%);
+}
+.Join a{
+color: white;
+
+text-decoration: none;
+
+letter-spacing: 2px;
+
+font-weight: bold;
+
+font-size: 14px;
+
+}
+body {
+background-color: #f0f0f0;
+font-family: Arial, sans-serif;
+background-color: black;
+}
+
+.container {
+background-color: #fff;
+border: 1px solid #ddd;
+padding: 20px;
+margin: 0 auto;
+width: 500px;
+box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+text-align: center;
+margin-bottom: 20px;
+}
+
+button {
+background-color: #4CAF50;
+color: #fff;
+border: none;
+padding: 10px 20px;
+border-radius: 5px;
+cursor: pointer;
+margin-bottom: 20px;
+}
+
+button:hover {
+background-color: #3e8e41;
+}
+
+#routine {
+display: none;
+}
+	</style>
+</head>
+<body>
+    <div class="first">
+
+        <nav>
+    
+          <div class="heading">
+    
+            <h4><a href="/landing">FITMINDS</a></h4>
+    
+          </div>
+    
+          <ul class="nav-links">
+            <li><a href="/plan">Plans</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/Contact">Contact</a></li>
+    
+          </ul>
+          <button class="Join"><a href="/Login_page">Join Us</a></button>
+    
+        </nav>
+	<div class="container">
+		<h1>Strength Training Routine</h1>
+		<button id="start-routine">Start Routine</button>
+		<div id="routine" style="display: none;">
+			<h2>Day 1</h2>
+			<p>Exercise 1: Squats</p>
+			<p>Exercise 2: Bench Press</p>
+			<p>Exercise 3: Deadlifts</p>
+			<h2>Day 2</h2>
+			<p>Exercise 1: Pull-ups</p>
+			<p>Exercise 2: Overhead Press</p>
+			<p>Exercise 3: Lunges</p>
+			<button id="next-day">Next Day</button>
+		</div>
+	</div>
+	<script src="/js/str.js"></script>
+</body>
+</html>
